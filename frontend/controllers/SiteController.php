@@ -1,6 +1,8 @@
 <?php
 namespace frontend\controllers;
 
+use frontend\models\Authors;
+use frontend\models\Books;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -255,6 +257,22 @@ class SiteController extends Controller
 
         return $this->render('resendVerificationEmail', [
             'model' => $model
+        ]);
+    }
+
+    public function actionTest()
+    {
+        return $this->render('test');
+    }
+
+    public function actionLibrary()
+    {
+        $model1 = Authors::find()->all();
+        $model2 = Books::find()->all();
+
+        return $this->render('library',[
+            'model1' =>$model1,
+            'model2' =>$model2,
         ]);
     }
 }
