@@ -32,11 +32,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'about:ntext',
             [
                 'attribute' => 'created_at',
-//                'format' => 'datetime',
                 'filter' =>  DateTimePicker::widget([
                     'name' => 'dp_1',
                     'type' => DateTimePicker::TYPE_INPUT,
-//                    'value' => '23-Feb-1982 10:10',
                     'pluginOptions' => [
                         'autoclose'=>true,
                         'format' => 'dd-M-yyyy HH:ii'
@@ -45,11 +43,10 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'attribute' => 'updated_at',
-//                'format' => 'datetime',
                 'filter' =>  DateTimePicker::widget([
                     'name' => 'dp_1',
                     'type' => DateTimePicker::TYPE_INPUT,
-//                    'value' => '23-Feb-1982 10:10',
+
                     'pluginOptions' => [
                         'autoclose'=>true,
                         'format' => 'dd-M-yyyy HH:ii'
@@ -59,7 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'label' => 'Количество книг',
                 'value' => 'bookscount',
-                //'attribute' => 'bookscount'
+               // 'attribute' => ''
             ],
             ['class' => 'yii\grid\ActionColumn'],
         ],
